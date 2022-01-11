@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import defaultImage from "./defaultImage.png";
 
-// const defaultStats = { followers: 0, views: 0, likes: 0 }
+const defaultTitle = "";
 const defaultFollowers = 0;
 const defaultViews = 0;
 const defaultLikes = 0;
-console.log(defaultImage);
 
 const Profile = ({
+  title,
   userName,
   tag,
   location,
@@ -18,6 +18,7 @@ const Profile = ({
   likes,
 }) => (
   <div class="profile">
+    <h2>{title}</h2>
     <div class="description">
       <img src={avatar} alt="User avatar" class="avatar" />
       <p class="name">{userName}</p>
@@ -43,6 +44,7 @@ const Profile = ({
 );
 
 Profile.defaultProps = {
+  title: defaultTitle,
   avatar: defaultImage,
   followers: defaultFollowers,
   views: defaultViews,
@@ -50,6 +52,7 @@ Profile.defaultProps = {
 };
 
 Profile.propTypes = {
+  title: PropTypes.string,
   userName: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

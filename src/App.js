@@ -5,8 +5,8 @@ import userData from "./user.json";
 const App = () => (
   <div>
     <h1>Homework 1</h1>
-    <h2>Task 1</h2>
     <Profile
+      title={"Task 1"}
       userName={userData.username}
       tag={userData.tag}
       location={userData.location}
