@@ -1,12 +1,15 @@
 import React from "react";
 import Profile from "./conponents/Profile";
 import Statistics from "./conponents/Statistics";
+import FriendList from "./conponents/FriendList";
 
 import userData from "./user.json";
 import statData from "./data.json";
+import friends from "./friends.json";
 
 const title1 = "Task 1. Profile";
 const title2 = "Task 2. Upload stats";
+const title3 = "Task 3. Friend list"
 
 const App = () => (
   <div>
@@ -23,6 +26,8 @@ const App = () => (
     />
 
     <Statistics title={title2} props={statData} />
+
+    <FriendList title={title3} props={friends} />
   </div>
 );
 
