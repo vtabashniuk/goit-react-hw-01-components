@@ -2,17 +2,20 @@ import React from "react";
 import Profile from "./conponents/Profile";
 import Statistics from "./conponents/Statistics";
 import FriendList from "./conponents/FriendList";
+import TransactionHistory from "./conponents/TransactionHistory";
 
 import userData from "./user.json";
 import statData from "./data.json";
 import friends from "./friends.json";
+import transactions from "./transactions.json";
 
 const title1 = "Task 1. Profile";
 const title2 = "Task 2. Upload stats";
-const title3 = "Task 3. Friend list"
+const title3 = "Task 3. Friend list";
+const title4 = "Task 4. Transactions history";
 
 const App = () => (
-  <div>
+  <>
     <h1>Homework 1</h1>
     <Profile
       title={title1}
@@ -28,7 +31,9 @@ const App = () => (
     <Statistics title={title2} props={statData} />
 
     <FriendList title={title3} props={friends} />
-  </div>
+
+    <TransactionHistory title={title4} props={transactions} />
+  </>
 );
 
 export default App;
