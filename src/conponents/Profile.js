@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import defaultImage from "./defaultImage.png";
 
-const defaultTitle = "";
+const defaultTitle1 = "";
 const defaultFollowers = 0;
 const defaultViews = 0;
 const defaultLikes = 0;
@@ -44,7 +44,7 @@ const Profile = ({
 );
 
 Profile.defaultProps = {
-  title: defaultTitle,
+  title: defaultTitle1,
   avatar: defaultImage,
   followers: defaultFollowers,
   views: defaultViews,
