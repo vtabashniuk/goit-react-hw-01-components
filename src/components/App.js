@@ -1,13 +1,12 @@
 import React from "react";
-import Profile from "./conponents/Profile";
-import Statistics from "./conponents/Statistics";
-import FriendList from "./conponents/FriendList";
-import TransactionHistory from "./conponents/TransactionHistory";
+import Profile from "./Profile/Profile";
+import Statistics from "./Statistics/Statistics";
+import FriendList from "./FriendsList/FriendList";
+import TransactionHistory from "./TransactionHistory/TransactionHistory";
 
-import userData from "./user.json";
-import statData from "./data.json";
-import friends from "./friends.json";
-import transactions from "./transactions.json";
+import userData from "../data/user.json";
+import statData from "../data/data.json";
+import { friends, transactions } from "../modifyDataValues";
 
 const title1 = "Task 1. Profile";
 const title2 = "Task 2. Upload stats";

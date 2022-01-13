@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import defaultImage from "./defaultImage.png";
+import defaultImage from "../defaultImage.png";
 
 const defaultTitle1 = "";
 const defaultFollowers = 0;
