@@ -9,7 +9,12 @@ const FriendListItem = ({ avatar, name, isOnline, styles }) => (
       style={{ backgroundColor: isOnline ? '#4EB439' : '#B42034' }}
     ></span>
     <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
-    <p className={styles.name}>{name}</p>
+    <p
+      className={styles.name}
+      style={{ color: isOnline ? '#000000' : '#d0d0d0' }}
+    >
+      {name}
+    </p>
   </>
 );
 
