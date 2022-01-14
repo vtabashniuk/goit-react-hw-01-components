@@ -1,16 +1,33 @@
-import React from "react";
-import StatisticItem from "./StatisticItem";
-import PropTypes from "prop-types";
+import React from 'react';
+import StatisticItem from './StatisticItem';
+import PropTypes from 'prop-types';
+import styles from './Statistics.module.css';
 
-const defaultTitle2 = "";
+const defaultTitle2 = '';
+
+const backgroundColors = {
+  '.docx': '#005DA6',
+  '.xlsx': '#1D6F42',
+  '.mp3': '#5CCAE4',
+  '.psd': '#3C327B',
+  '.pdf': '#F40F02',
+};
 
 const Statistics = ({ title, props }) => (
-  <section class="statistics">
-    {title ? <h2 class="title">{title}</h2> : null}
-    <ul class="stat-list">
+  <section className={styles.statistics}>
+    {title ? <h2 className={styles.title}>{title}</h2> : null}
+    <ul className={styles.stat_list}>
       {props.map(({ id, label, percentage }) => (
-        <li class="item" key={id}>
-          <StatisticItem label={label} percentage={percentage} />
+        <li
+          className={styles.item}
+          key={id}
+          style={{ backgroundColor: backgroundColors[label] }}
+        >
+          <StatisticItem
+            label={label}
+            percentage={percentage}
+            styles={styles}
+          />
         </li>
       ))}
     </ul>
