@@ -1,0 +1,11 @@
+.title {
+  margin: 0 0 10px 0;
+  text-align: center;
+  border-bottom: 1px dotted darkblue;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

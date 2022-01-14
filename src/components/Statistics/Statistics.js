@@ -15,7 +15,7 @@ const backgroundColors = {
 
 const Statistics = ({ title, props }) => (
   <section className={styles.statistics}>
-    {title ? <h2 className={styles.title}>{title}</h2> : null}
+    {title ? <h2 className="title">{title}</h2> : null}
     <ul className={styles.stat_list}>
       {props.map(({ id, label, percentage }) => (
         <li

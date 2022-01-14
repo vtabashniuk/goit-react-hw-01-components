@@ -1,16 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import FriendListItem from "./FriendListItem";
+import React from 'react';
+import PropTypes from 'prop-types';
+import FriendListItem from './FriendListItem';
+import styles from './FriendList.module.css';
 
-const defaultTitle3 = "";
+const defaultTitle3 = '';
 
 const FriendList = ({ title, props }) => (
-  <div class="friendList">
-    <h2>{title}</h2>
-    <ul class="friend-list">
+  <div className={styles.friendList}>
+    <h2 className="title">{title}</h2>
+    <ul>
       {props.map(({ avatar, name, isOnline, id }) => (
-        <li class="item" key={id}>
-              <FriendListItem avatar={avatar} name={name} isOnline={isOnline} />
+        <li className={styles.item} key={id}>
+          <FriendListItem
+            avatar={avatar}
+            name={name}
+            isOnline={isOnline}
+            styles={styles}
+          />
         </li>
       ))}
     </ul>

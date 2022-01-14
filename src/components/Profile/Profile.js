@@ -19,7 +19,7 @@ const Profile = ({
   likes,
 }) => (
   <div className={styles.profile}>
-    <h2 className={styles.title}>{title}</h2>
+    <h2 className="title">{title}</h2>
     <div className={styles.description}>
       <img src={avatar} alt="User avatar" className={styles.avatar} />
       <p className={styles.name}>{userName}</p>

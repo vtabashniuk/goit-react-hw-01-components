@@ -1,14 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import defaultAvatar from "../defaultImage.png";
+import React from 'react';
+import PropTypes from 'prop-types';
+import defaultAvatar from '../defaultImage.png';
 
-const FriendListItem = ({ avatar, name, isOnline }) => (
+const FriendListItem = ({ avatar, name, isOnline, styles }) => (
   <>
-    <span class="status">
-      {isOnline ? "ONLINE >>>>" : "OFFLINE XXXX"}
-    </span>
-    <img class="avatar" src={avatar} alt="User avatar" width="48" />
-    <p class="name">{name}</p>
+    <span
+      className={styles.status}
+      style={{ backgroundColor: isOnline ? '#4EB439' : '#B42034' }}
+    ></span>
+    <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
+    <p className={styles.name}>{name}</p>
   </>
 );
 
