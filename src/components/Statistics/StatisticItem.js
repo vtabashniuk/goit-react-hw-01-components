@@ -11,6 +11,7 @@ const StatisticItem = ({ label, percentage, styles }) => (
 StatisticItem.propTypes = {
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
+  styles: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default StatisticItem;

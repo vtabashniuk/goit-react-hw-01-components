@@ -9,3 +9,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  color: #61DBFB;
+  text-align: center;
+  text-decoration: underline dotted darkblue 1px;
+}
